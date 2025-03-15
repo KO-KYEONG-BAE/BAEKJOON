@@ -6,15 +6,20 @@ namespace baekjoon
     {
         static void Main(string[] args)
         {
-            int tCase = int.Parse(Console.ReadLine());
-            int[] CaseInput = new int[tCase];
-            for (int i = 0; i < tCase; i++){
-                CaseInput[i] = int.Parse(Console.ReadLine());
+            int input = int.Parse(Console.ReadLine());
+            int value = 3;
+            int subvalue = 2;
+
+            if (input == 1) {
+            }
+            else {
+                for (int i = 0; i < input - 1; i++) {
+                value = value + subvalue;
+                subvalue = subvalue * 2;
+                }
             }
 
-            for (int i = 0; i < tCase; i++){
-                Console.WriteLine("{0} {1} {2} {3}", CaseInput[i] / 25, CaseInput[i] % 25 / 10, CaseInput[i] % 25 % 10 / 5, CaseInput[i] % 25 % 10 % 5 / 1);
-            }
+            Console.WriteLine(value * value);
         }
     }
 }
