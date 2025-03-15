@@ -1,25 +1,19 @@
 ﻿using System;
 
-namespace baekjoon
+class Baekjoon2292
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        int input = int.Parse(Console.ReadLine());
+        int cnt = 0;
+        int sum = 1;
+
+        while (input > sum)
         {
-            int input = int.Parse(Console.ReadLine());
-            int value = 3;
-            int subvalue = 2;
-
-            if (input == 1) {
-            }
-            else {
-                for (int i = 0; i < input - 1; i++) {
-                value = value + subvalue;
-                subvalue = subvalue * 2;
-                }
-            }
-
-            Console.WriteLine(value * value);
+            cnt++;
+            sum += cnt * 6;
         }
+
+        Console.WriteLine(cnt + 1);
     }
 }
